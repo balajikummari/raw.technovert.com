@@ -1,0 +1,116 @@
+﻿//carousels in home page
+#carousel {
+    .carousel-boxes {
+        @extend .position-static;
+        @extend .d-block;
+        @extend .m-0;
+
+        .carousel-box {
+
+            @extend .p-16;
+            @extend .mb-10;
+
+            &.active {
+                @extend .bg-white;
+                @extend .shadow-high;
+                @extend .cursor-pointer;
+
+                p {
+                    &.font-weight-bold {
+                        @extend .text-blue;
+                    }
+                }
+            }
+
+            &:hover {
+                @extend .cursor-pointer;
+
+                p {
+                    &.font-weight-bold {
+                        @extend .text-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-item {
+        img {
+            @extend .w-100;
+        }
+    }
+}
+
+// carousle in mobile home page
+#carouselmobile {
+    @extend .mb-xs-40;
+
+    .carousel-indicators {
+        bottom: -50px;
+        @extend .mb-xs-0;
+
+        li {
+            @extend .bg-blue;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    }
+
+    p {
+        @extend .text-center;
+        @extend .text-secondary;
+        @extend .font-weight-bold;
+        @extend .my-10;
+    }
+
+    .carousel-item {
+        img {
+            @extend .w-100;
+        }
+    }
+}
+
+// carousel for features pages
+
+#featuresCarousel, #attritionAnalyticsCarousel {
+    .carousel-control-prev {
+        left: -100px;
+        top: -30px;
+
+        span {
+            font-size: 60px;
+        }
+    }
+
+    .carousel-control-next {
+        right: -100px;
+        top: -30px;
+
+        span {
+            font-size: 60px;
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item {
+            .carousel-feature {
+                @extend .w-200;
+                @extend .h-200;
+                @extend .mx-auto;
+                @extend .text-center;
+
+                img {
+                    @extend .mx-auto;
+                    @extend .mb-12;
+                }
+
+                p {
+                    @extend .text-sm;
+                    @extend .text-secondary;
+                    @extend .font-weight-semi-bold;
+                }
+            }
+        }
+    }
+}

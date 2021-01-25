@@ -1,0 +1,503 @@
+﻿// Header
+
+// navbar below spaces
+
+main {
+    section {
+        &:first-of-type {
+            @extend .mt-60;
+            @extend .mt-xs-40;
+
+            .content-container, .image-container {
+                @extend .text-center; // for mobile in home page
+                @extend .text-md-left; // for desktop in home page
+                p {
+                    @extend .mb-40;
+                }
+            }
+        }
+    }
+
+    .sub-navbar {
+        & + section {
+            @extend .mt-80;
+            @extend .mt-xs-40;
+
+            .content-container, .image-container {
+                @extend .text-center; // for mobile in home page
+                @extend .text-md-left; // for desktop in home page
+                p {
+                    @extend .mb-40;
+                }
+            }
+        }
+    }
+}
+
+.sticky {
+    @extend .position-sticky;
+    @extend .top-0;
+    z-index: 99;
+}
+
+.navbar-expand-lg {
+    @extend .py-0;
+    @extend .sticky;
+
+    &.main-navbar {
+        @extend .bg-white;
+        @extend .py-20;
+        @extend .px-xs-20;
+        @extend .py-xs-15;
+        z-index: 99;
+        transition: 0.2s;
+
+        .navbar-nav {
+            @extend .mt-xs-20;
+        }
+    }
+
+
+
+    .navbar-toggler {
+
+        &:focus {
+            @extend .shadow-none;
+        }
+    }
+
+    .navbar-nav {
+
+        .nav-link {
+            @extend .text-xs;
+            @extend .text-secondary;
+            @extend .mr-40;
+            @extend .px-0;
+            @extend .py-10;
+
+            &.dropdown-toggle {
+                &::after {
+                    @extend .border-0;
+                }
+            }
+        }
+        // for products dropdown
+        .dropdown-menu {
+            @extend .border-0;
+            @extend .shadow-low;
+            @extend .w-600;
+            @extend .mt-0;
+            @extend .py-6;
+            z-index: 99;
+
+            .dropdown-item {
+                white-space: normal !important;
+                @extend .mx-6;
+                @extend .p-0;
+
+                .feature-item {
+                    @extend .d-flex;
+                    @extend .mx-20;
+                    @extend .my-12;
+
+                    p:nth-child(odd) {
+                        @extend .text-sm;
+                        @extend .text-secondary;
+                        @extend .font-weight-semi-bold;
+                    }
+
+                    p:nth-child(even) {
+                        @extend .text-xxxs;
+                        @extend .text-primary;
+                    }
+                }
+
+                &:hover {
+                    //@extend .bg-orange-12;
+                    @extend .rounded-4;
+                }
+            }
+        }
+        // for the customers and about dropdowns
+        .small-dropdown {
+
+            .dropdown-menu {
+                @extend .w-200;
+
+                .dropdown-item {
+                    @extend .text-xs;
+                    @extend .px-20;
+                    @extend .py-10;
+                    @extend .ml-0;
+                    @extend .text-secondary;
+
+                    &:hover {
+                        @extend .bg-aqua-10;
+                        @extend .rounded-0;
+                    }
+
+                    &:active {
+                        @extend .rounded-0;
+                        @extend .bg-aqua-10;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &.sub-navbar {
+        @extend .bg-slate-10;
+        @extend .border-slate-40;
+        @extend .border-top;
+        @extend .border-bottom;
+        z-index: 9;
+
+        .navbar-nav {
+
+            li {
+                .nav-link {
+                    @extend .text-primary;
+                    @extend .py-20;
+                }
+
+                &.active {
+                    .nav-link {
+                        @extend .text-secondary;
+                        @extend .border-bottom;
+                        @extend .border-bottom-width-2;
+                        @extend .border-blue;
+                    }
+                }
+            }
+        }
+        // for mobile subnavbar
+        .mobile-sub-navbar {
+            @extend .container;
+            @extend .d-flex;
+            @extend .align-items-center;
+            @extend .g-0;
+
+            .navbar-nav {
+                @extend .w-100;
+                @extend .flex-row;
+                @extend .overflow-auto;
+
+                li {
+                    .nav-link {
+                        @extend .text-nowrap;
+                        @extend .mx-20;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// for the integrations page
+.vertical-navbar {
+    @extend .nav;
+    @extend .flex-column;
+    @extend .border;
+    @extend .border-slate-50;
+    @extend .rounded-4;
+    @extend .position-sticky;
+    top: 90px;
+
+    li {
+        .nav-link {
+            @extend .px-20;
+            @extend .py-16;
+            @extend .text-sm;
+            @extend .text-secondary;
+            @extend .border-bottom;
+            @extend .border-slate-50;
+
+            &.active {
+                @extend .bg-aqua-10;
+            }
+
+            &:hover {
+                cursor: pointer;
+                @extend .bg-aqua-10;
+            }
+
+            &:focus {
+                @extend .bg-aqua-10;
+            }
+        }
+
+        &:first-child {
+            .nav-link {
+                @extend .rounded-y-4;
+            }
+        }
+
+        &:last-child {
+            .nav-link {
+                @extend .border-bottom-0;
+            }
+        }
+    }
+}
+
+
+// for subnavbar title
+.sub-navbar-title {
+    @extend .text-sm;
+    @extend .text-secondary;
+    @extend .font-weight-black;
+    @extend .text-uppercase;
+    @extend .text-nowrap;
+
+    &.desktop-visibility {
+        @extend .mr-50;
+    }
+
+    &.mobile-visibility {
+        @extend .p-xs-20;
+    }
+}
+// for the desktop login and get started
+.desktop-login {
+    @extend .list-unstyled;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .ml-auto;
+    @extend .mb-0;
+}
+
+// for the mobile login and get started
+.mobile-login {
+    @extend .mobile-visibility;
+    @extend .list-unstyled;
+
+    .mobile-button {
+        @extend .mt-0;
+        @extend .mb-20;
+    }
+}
+
+//  for the pricing page submenu
+.sub-menu {
+
+    @extend .border-bottom;
+    @extend .mb-20;
+
+    .nav-tabs {
+        @extend .border-0;
+
+        a {
+            @extend .text-sm;
+            @extend .text-primary;
+            @extend .text-nowrap;
+            @extend .mr-80;
+            @extend .px-0;
+            @extend .border-0;
+
+            &.active {
+                @extend .border-bottom;
+                @extend .border-blue;
+                @extend .text-blue;
+            }
+        }
+    }
+}
+
+
+// Footer
+footer {
+
+    .bg-black-light {
+
+        ul {
+            @extend .list-unstyled;
+
+            li {
+                @extend .mb-10;
+
+                a {
+                    @extend .text-white-600;
+                    @extend .text-xxs;
+
+                    &:hover {
+                        @extend .text-white;
+                    }
+                }
+            }
+        }
+
+        p {
+            @extend .text-white;
+            @extend .font-weight-semi-bold;
+            @extend .text-xxs;
+        }
+
+        span {
+            @extend .text-white-600;
+            @extend .text-xxs;
+        }
+
+        .footer {
+            a {
+                @extend .text-white-600;
+                @extend .text-xxs;
+
+                &:hover {
+                    @extend .text-white;
+                    @extend .text-xxs;
+                }
+            }
+        }
+
+        .collapse-header {
+            @extend .d-flex;
+            @extend .justify-content-between;
+            @extend .align-items-center;
+            @extend .cursor-pointer;
+            @extend .px-16;
+            @extend .py-12;
+            @extend .border;
+            @extend .border-slate-600;
+            @extend .rounded-4;
+
+            p {
+                @extend .text-body-font-size;
+                @extend .font-weight-extra-bold;
+            }
+        }
+    }
+
+    .bg-black-dark {
+
+        ul {
+            @extend .list-unstyled;
+            @extend .d-flex;
+            @extend .justify-content-end;
+            @extend .py-30;
+
+            li {
+                @extend .ml-30;
+
+                a {
+                    @extend .text-white-600;
+                    @extend .text-xxs;
+
+                    &:hover {
+                        @extend .text-white;
+                    }
+                }
+            }
+        }
+
+        p {
+            @extend .text-white-600;
+            @extend .text-xxs;
+        }
+    }
+}
+
+// dropdown on hover in navbar
+@media all and (min-width: 768px) {
+
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+   
+}
+
+// dropdown on click in navbar
+@media all and (max-width: 991px) {
+
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .nav-item .dropdown-menu.show {
+        display: block;
+    }
+}
+
+// dropdown on hover in navbar with animation for big screen
+@media all and (min-width: 991px) {
+
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+        animation: fade-in 0.1s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fade-in {
+        0% {
+            transform: translateY(-5px);
+        }
+
+        
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    
+}
+
+
+// navbar on hover the dropdown item bg colors
+
+.bg-aqua-on-hover {
+    &:hover {
+        @extend .bg-aqua-light;
+    }
+}
+
+.bg-magenta-on-hover {
+    &:hover {
+        @extend .bg-magenta-light;
+    }
+}
+
+.bg-orange-on-hover {
+    &:hover {
+        @extend .bg-orange-light;
+    }
+}
+
+.bg-blue-on-hover {
+    &:hover {
+        @extend .bg-blue-light;
+    }
+}
+
+.bg-green-on-hover {
+    &:hover {
+        @extend .bg-green-light;
+    }
+}
+
+.bg-yellow-on-hover {
+    &:hover {
+        @extend .bg-yellow-light;
+    }
+}
+
+.bg-voilet-on-hover {
+    &:hover {
+        @extend .bg-voilet-light;
+    }
+}
+
+// for the sticky navbar animation
+
+.shadow-nav {
+    nav {
+        &.navbar {
+            &.navbar-expand-lg {
+                &.main-navbar {
+                    @extend .py-10;
+                }
+            }
+        }
+    }
+}
