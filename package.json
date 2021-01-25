@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Technovert.com",
   "author": "Technovert Devs",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "gulp",
     "start": "gulp serve",
