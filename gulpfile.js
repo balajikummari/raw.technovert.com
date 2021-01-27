@@ -18,7 +18,7 @@ var gzip = require("gulp-gzip");
 const isProd = process.env.NODE_ENV === "prod";
 // const isProd = true;
 
-const htmlFile = ["src/*.html"];
+const htmlFile = ["src/**/*.html"];
 
 function html() {
   return gulp
