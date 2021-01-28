@@ -1,87 +1,41 @@
-$primary-text-color: #69727A !default; // text grey color
-$secondary-text-color: #2C2E31 !default; // text black color
+$black: #2c2e31 !default; // black color
 
-$black: #000 !default; // black color
-$black-100: #383B43 !default; // first footer bg color
-$black-500: #25272E !default; // second footer bg color
+$blue: #1077da !default;
+$blue-100: #dbebfa;
 
-$white-color: #fff !default; // white color
-$white-600: #afb1b4 !default; // footer text color
-$white-100: #4C4F56 !default; // footer border color
+$green: #63c572;
 
-$pink-color: #FA3399 !default; // footer we are hiring color
+$gray: #666d7d;
+$gray-100: #bbc2d2;
 
-$blue-color: #1077DA !default; // blue color
-$blue-100-color: #DBEBFA !default; // blue bg color
-$blue-200-color: #0077b5 !default; // linkedin bg color
-$blue-300-color: #1ea0f2 !default; // twitter bg color
-$blue-400-color: #3b5997 !default; // fb bg color
-$blue-500-color: #206aa2 !default; // button  primary hover color
+$primary-text-color: $black;
+$secondary-text-color: #fff !default;
 
-$aqua-color: #4AC2E4 !default; // aqua color
-$aqua-100-color: #DBF3FA !default; // aqua bg color
-$aqua-10-color: #F8FAFC !default; // light aqua bg color
-
-$magenta-color: #E44C7D !default; // magenta color
-$magenta-100-color: #FBE9EF !default; // magenta bg color
-
-$green-color: #6AC069 !default; // green color
-$green-100-color: #E1F2E1 !default; // green bg color
-
-$orange-color: #F9AB00 !default; // oragne color
-$orange-100-color: #FFF1EA !default; // orange bg color
-$orange-12: #ffeee6 !default; // navbar dropdown hover color
-
-$voilet-color: #8484D7 !default; // voilet color
-$voilet-100-color: #E9E9FF !default; // voilet bg color
-
-$yellow-color: #FFD012 !default; // yellow color
-$yellow-100-color: #FFF8DC !default; // yellow bg color
-
-$slate-10: #FAFAFC !default; // sub navbar bg color
-$slate-20: #F8F8F9 !default; // for btn-light button
-$slate-30: #F6F7F9 !default; // features carousel bg color
-$slate-40: #EEF0F4 !default; // sub navbar border color
-$slate-50: #E4E6E9 !default; // blog page card border color
-$slate-60: #C5CBD5 !default; // blog page search icon color
-$slate-100: #D4D9DC !default;
-$slate-200: #C2C6C9 !default; // placeholder color
-$slate-300: #B4BAC5 !default; // dashed border color
-$slate-500: #A4AAB2 !default; // icon color
-$slate-600: #88898e !default; // mobile footer collapse color
-
+$slate-500: #a4aab2 !default; // icon color
 
 // Text Colors
-$text-colors: ("icon-color": $slate-500, "primary": $primary-text-color, "secondary": $secondary-text-color, "white": $white-color, "white-600": $white-600, "pink": $pink-color, "blue": $blue-color, "aqua": $aqua-color, "magenta": $magenta-color, "green": $green-color, "orange": $orange-color, "voilet": $voilet-color, "yellow": $yellow-color, "slate-200": $slate-200, "slate-60": $slate-60,);
+$colors: (
+  "icon-color": $slate-500,
+  "primary": $primary-text-color,
+  "secondary": $secondary-text-color,
+  "green": $green,
+  "blue": $blue,
+  "light-blue": $blue-100,
+  "gray": $gray,
+  "light-gray": $gray-100,
+  "white": #FFF;
+);
 
-@each $color-name, $color-value in $text-colors {
+@each $color-name, $color-value in $colors {
+  .text-#{$color-name} {
+    color: $color-value !important;
+  }
 
-    .text-#{$color-name} {
-        color: $color-value !important;
-    }
+  .bg-#{$color-name} {
+    background-color: $color-value !important;
+  }
 
-}
-
-// Background Colors
-
-$bg-colors: ("black-light": $black-100, "black-dark": $black-500, "aqua-light": $aqua-100-color, "aqua-10": $aqua-10-color, "blue": $blue-color, "blue-light": $blue-100-color, "blue-200": $blue-200-color, "blue-300": $blue-300-color, "blue-400": $blue-400-color,"blue-500": $blue-500-color, "magenta-light": $magenta-100-color, "green": $green-color, "green-light": $green-100-color, "orange-light": $orange-100-color, "orange-12": $orange-12, "voilet-light": $voilet-100-color, "yellow-light": $yellow-100-color, "slate-10":$slate-10, "slate-20":$slate-20, "slate-30":$slate-30, "slate-300":$slate-300, "white": $white-color,);
-
-@each $color-name, $color-value in $bg-colors {
-
-    .bg-#{$color-name} {
-        background-color: $color-value !important;
-    }
-
-}
-
-// Border Colors
-
-$border-colors: ("blue": $blue-color, "white-100": $white-100, "white": $white-color, "slate-40": $slate-40, "slate-50": $slate-50, "slate-300": $slate-300, "slate-600": $slate-600, "blue-500": $blue-500-color, );
- 
-@each $color-name, $color-value in $border-colors {
-
-    .border-#{$color-name} {
-        border-color: $color-value !important;
-    }
-
+  .border-#{$color-name} {
+    border-color: $color-value !important;
+  }
 }

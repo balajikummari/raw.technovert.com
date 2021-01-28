@@ -89,19 +89,3 @@ $border: (0, 1, 2, 3, 4, 5); // Add your values here
 .rounded-20 {
     border-radius: 20px !important;
 }
-
-// Shadows
-
-.shadow-high {
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
-}
-.shadow-low {
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
-}
-.shadow-y {
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
-}
-
-.shadow-nav {
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
-}
