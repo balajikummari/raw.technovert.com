@@ -9,48 +9,73 @@ a {
     @extend .text-decoration-none;
 }
 
-h1, h2, h3, p, h5, h6, p, ul {
+h1, h2, h3, h5, h6, p, ul {
     @extend .mb-0;
 }
 
 // font-sizes
-.title {
-    font-size: 60px;
-    line-height: 72px;
-    @extend .font-weight-extra-bold;
-    @extend .text-white;
+.hero-white {
+  font-size: 56px;
+  line-height: 72px;
+  @extend .text-white;
+  @extend .font-weight-black;
 }
 
 h1, .header-1 {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 64px;
     @extend .font-weight-extra-bold;
     @extend .text-secondary;
 }
 
 h2, .header-2 {
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 40px;
+    line-height: 56px;
     @extend .text-secondary;
+    @extend .font-weight-extra-bold;
 }
 
 h3, .header-3 {
+    font-size: 36px;
+    line-height: 52px;
+    @extend .text-secondary;
+    @extend .font-weight-extra-bold;
+}
+
+h4, .header-4 {
+    font-size: 32px;
+    line-height: 40px;
+    @extend .text-secondary;
+    @extend .font-weight-extra-bold;
+}
+
+.header-4-light {
+    color: #2E3342;
+    font-size: 32px;
+    line-height: 40px;
+    @extend .font-weight-semi-bold;
+    @extend .text-secondary;
+}
+
+h5, .header-5 {
     font-size: 24px;
     line-height: 32px;
-    @extend .font-weight-bold;
+    @extend .font-weight-semi-bold;
     @extend .text-secondary;
 }
 
-h5 {
-    font-size: 21px;
-    line-height: 32px;
-    @extend .font-weight-bold;
+.jd-quote {
+    font-size: 28px;
+    line-height: 36px;
+    @extend .font-weight-light;
     @extend .text-secondary;
 }
 
-.text-large {
-    font-size: 21px;
-    line-height: 32px;
+.label {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 28px;
+    @extend .font-weight-extra-bold;
 }
 
 // default font size
@@ -61,50 +86,20 @@ h5 {
 
 .text-sm {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
 }
 
 .text-xs {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
 }
 
 .text-xxs {
-    font-size: 13px;
-    line-height: 20px;
-}
-
-.text-xxxs {
     font-size: 12px;
-    line-height: 16px;
-}
-
-.text-small {
-    font-size: 11px;
     line-height: 20px;
-}
-
-//meta-heading
-.meta-heading {
-    @extend .text-xs;
-    @extend .text-magenta;
-    @extend .mb-10;
-    @extend .text-uppercase;
-    @extend .font-weight-extra-bold;
-    letter-spacing: 1.6px;
-}
-
-//text label
-.text-label {
-    @extend .text-xxxs;
-    @extend .font-weight-semi-bold;
-    @extend .text-primary;
-    @extend .text-uppercase;
-    letter-spacing: 1.5px;
 }
 
 // font weights
-
 .font-weight-light {
     font-weight: 300;
 }
@@ -126,7 +121,6 @@ h5 {
 }
 
 // extending font sizes and font weights
-
 .text-large-bold {
     @extend .text-large;
     @extend .text-secondary;
