@@ -36,6 +36,12 @@ h1,
   @extend .text-primary;
 }
 
+h1.title-2 {
+  font-size: 48px;
+  line-height: 64px;
+  @extend .font-weight-semi-bold;
+}
+
 h2,
 .header-2 {
   font-size: 40px;
