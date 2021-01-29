@@ -88,6 +88,14 @@ h5,
   @extend .text-primary;
 }
 
+.hero-prefix {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 28px;
+  text-transform: uppercase;
+  @extend .text-secondary;
+}
+
 .label {
   font-size: 14px;
   letter-spacing: 0.7px;
@@ -149,58 +157,3 @@ h5,
   max-height: 100px;
 }
 
-$values: (
-  95,
-  140,
-  150,
-  165,
-  200,
-  250,
-  260,
-  275,
-  280,
-  300,
-  320,
-  340,
-  360,
-  375,
-  400,
-  450,
-  480,
-  550,
-  570,
-  600,
-  700,
-  750,
-  800,
-  900,
-  950
-); // Add your values here
-
-@each $value in $values {
-  // For Maximum Widths and Widths
-  .max-w-#{$value} {
-    max-width: #{$value}px;
-  }
-
-  .min-w-#{$value} {
-    min-width: #{$value}px;
-  }
-
-  .w-#{$value} {
-    width: #{$value}px;
-  }
-
-  // For Maximum Heights and Heights
-  .max-h-#{$value} {
-    max-height: #{$value}px;
-  }
-
-  .min-h-#{$value} {
-    min-height: #{$value}px;
-  }
-
-  .h-#{$value} {
-    height: #{$value}px;
-  }
-}
