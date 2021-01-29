@@ -1,3 +1,5 @@
+$black: #2c2e31 !default; // black color
+
 $blue: #1077da !default;
 $blue-100: #dbebfa;
 
@@ -6,7 +8,7 @@ $green: #63c572;
 $gray: #666d7d;
 $gray-100: #bbc2d2;
 
-$primary-text-color: #2c2e31 !default;
+$primary-text-color: $black;
 $secondary-text-color: #fff !default;
 
 $slate-500: #a4aab2 !default; // icon color
@@ -14,6 +16,7 @@ $slate-500: #a4aab2 !default; // icon color
 // Text Colors
 $colors: (
   "icon-color": $slate-500,
+  "primary": $primary-text-color,
   "secondary": $secondary-text-color,
   "green": $green,
   "blue": $blue,
@@ -21,7 +24,6 @@ $colors: (
   "gray": $gray,
   "light-gray": $gray-100,
   "white": #FFF,
-  "primary": $primary-text-color
 );
 
 @each $color-name, $color-value in $colors {
