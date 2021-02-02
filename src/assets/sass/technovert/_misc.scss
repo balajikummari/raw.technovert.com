@@ -4,6 +4,11 @@ section {
   @extend .px-4, .px-md-5, .px-lg-14;
 }
 
+.img {
+  width: 100%;
+  height: auto;
+}
+
 .underline::after {
   content: "";
   display: block;
@@ -16,22 +21,21 @@ section {
   @extend .mx-auto;
 }
 
-.flex-row {
-  flex-direction: row;
+.flex-h-center {
+  @extend .d-flex;
+  @extend .justify-content-center;
 }
 
-.flex-col {
-  flex-direction: column;
+.flex-v-center {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
 }
 
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.align-start {
-  align-items: flex-start;
 }
 
 .gradient-1 {
