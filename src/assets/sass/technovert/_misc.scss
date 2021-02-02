@@ -4,9 +4,13 @@ section {
   @extend .px-4, .px-md-5, .px-lg-14;
 }
 
-.img {
+img {
   width: 100%;
   height: auto;
+}
+
+.underline {
+  @extend .mb-40;
 }
 
 .underline::after {
@@ -14,6 +18,7 @@ section {
   display: block;
   width: 90px;
   height: 6px;
+  margin-top: 5px;
   @extend .bg-blue;
 }
 
@@ -40,4 +45,28 @@ section {
 
 .gradient-1 {
   background: linear-gradient(135deg, #5f1ab3 0%, #005f91 100%);
+}
+
+.card-icon {
+  width: 76px;
+  height: 76px;
+  background: $primary;
+  opacity: 0.1;
+  border-radius: 55px;
+  @extend .flex-center;
+}
+
+.card-ciruclar h3 {
+  color: #2e3342;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.card-circular p {
+  color: #666d7d;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
 }
