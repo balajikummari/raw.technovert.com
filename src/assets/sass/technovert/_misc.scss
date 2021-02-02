@@ -1,9 +1,35 @@
-.flex-row {
-  flex-direction: row;
+//Padding in each section set globally from here
+section {
+  @extend .py-80;
+  @extend .px-4, .px-md-5, .px-lg-14;
 }
 
-.flex-col {
-  flex-direction: column;
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 6px;
+  @extend .bg-blue;
+}
+
+.mx-auto.underline::after {
+  @extend .mx-auto;
+}
+
+.flex-h-center {
+  @extend .d-flex;
+  @extend .justify-content-center;
+}
+
+.flex-v-center {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
 }
 
 .flex-center {
@@ -12,10 +38,6 @@
   justify-content: center;
 }
 
-.align-start {
-  align-items: flex-start;
-}
-
 .gradient-1 {
-    background: linear-gradient(135deg, #5F1AB3 0%, #005F91 100%);
+  background: linear-gradient(135deg, #5f1ab3 0%, #005f91 100%);
 }
