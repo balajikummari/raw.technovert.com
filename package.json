@@ -7,14 +7,14 @@
   "private": true,
   "scripts": {
     "build": "gulp",
-    "start": "gulp serve",
+    "start": "node prebuild.js && gulp serve",
     "prod": "cross-env NODE_ENV=prod gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "cross-env": "^7.0.2",
     "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
+    "gulp-clean": "^0.4.0", 
     "gulp-concat": "^2.6.1",
     "gulp-cssbeautify": "^2.0.1",
     "gulp-cssmin": "^0.2.0",

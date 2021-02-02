@@ -1,3 +1,21 @@
+//Padding in each section set globally from here
+section {
+  @extend .py-80;
+  @extend .px-4, .px-md-5, .px-lg-14;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 6px;
+  @extend .bg-blue;
+}
+
+.mx-auto.underline::after {
+  @extend .mx-auto;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -17,5 +35,5 @@
 }
 
 .gradient-1 {
-    background: linear-gradient(135deg, #5F1AB3 0%, #005F91 100%);
+  background: linear-gradient(135deg, #5f1ab3 0%, #005f91 100%);
 }
